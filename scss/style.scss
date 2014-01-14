@@ -1,0 +1,54 @@
+$primary-font: Arial, sans-serif;
+
+$primary-color: green;
+
+$large-screen: 45em;
+
+$medium-screen: 30em;
+
+
+@mixin test(){
+	outline: 1px solid red;	
+}
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+h1{
+	color:$primary-color;
+	font-family:$primary-font;	
+}
+
+h2{
+	border:1px solid green;	
+}
+
+body{
+	padding:0;
+	margin:0;	
+	border:1px solid $primary-color;
+}
+
+/* Main navigation */
+@import 'navigation';
+
+/* Footer */
+@import 'footer';
+
+
+
+
+
+
+
+
+
+
+
+
+

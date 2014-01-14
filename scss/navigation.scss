@@ -1,0 +1,44 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+nav{
+	
+	@media (min-width:$medium-screen){	
+		ul{
+			border:1px solid red;	
+			@include border-radius(10px);
+			width:900px;
+			margin: 0 auto;
+		}
+			
+	}			
+	
+
+	@media (min-width:$large-screen){	
+		ul{
+			border:1px solid blue;
+			padding:0;
+			@include clearfix;	
+		}
+			
+		li{
+			background:#eaeaea;	
+			float:left;
+			@include border-radius(20px);
+			margin-left:10px;
+			&:first-child{margin-left:0px;}
+		}
+			
+	}			
+	
+}
+
